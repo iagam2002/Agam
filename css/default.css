@@ -1,0 +1,364 @@
+/*----------------------------------------------
+*
+* [Default Stylesheet]
+*
+* Theme    : Relome - Personal Portfolio WordPress Theme
+* Version  : 1.0
+* Author   : Themeland
+* Support  : hridoy1272@gmail.com
+* 
+----------------------------------------------*/
+
+/*----------------------------------------------
+
+[ALL CONTENTS]
+
+1. Root
+2. Button
+
+----------------------------------------------*/
+
+/*----------------------------------------------
+1. Root
+----------------------------------------------*/
+
+/* #region Root */
+
+:root {
+	--primary-font: "Inter", serif;
+	--secondary-font: "Inter", serif;
+
+	--h1-size: 6rem;
+	--h1-weight: 800;
+
+	--h2-size: 4rem;
+	--h2-weight: 800;
+
+	--p-size: 1rem;
+	--p-weight: 400;
+
+	--header-bg-color: #030712;
+	--nav-brand-height: 50px;
+	--nav-item-color: var(--white-color);
+	--hero-bg-color: #030712;
+
+	--primary-color: #CBACF9;
+	--secondary-color: #480092;
+
+	--white-color: #F9F9F9;
+	--black-color: #040402;
+	--dark-grey-color: #191919;
+
+	--primary-t-color: #FFFFFF;
+	--primary-t-color-2: #B6BCC6;
+	--secondary-t-color: #F9F9F9;
+	--secondary-t-color-2: #A6ABB4;
+	--primary-p-color: #BEC1DD;
+	--secondary-p-color: #909DAC;
+	--primary-b-color: #F5F5F5;
+	--secondary-b-color: #8B8D92;
+	--primary-l-color: rgba(152, 152, 152, 0.15);;
+	--secondary-l-color: rgba(255, 255, 255, 0.15);
+
+	--box-shadow-color: rgba(9, 31, 67, 0.06);
+
+	--valid-color: #007a4d;
+	--invalid-color: #e34f4f;
+	--neutral-color: #B9B6D9;
+
+	--primary-bg-color: #000319;
+	--primary-bg-color-2: #E8EAED;
+	--primary-bg-color-3: #E5E5E5;
+
+	--secondary-bg-color: #111013;
+	--secondary-bg-color-2: #1C1B1E;
+	--secondary-bg-color-3: #191919;
+
+	--card-bg-color: #070A22;
+	--button-color: #E0E0FF;
+	--button-color-dark: #565960;
+	--button-hover-color: var(--primary-color);
+	--fill-color: color-mix(in srgb, var(--neutral-color) 8%, transparent);
+
+	--footer-bg-color: #070A22;
+
+	--border-color: color-mix(in srgb, var(--neutral-color) 15%, transparent);
+
+	--border-radius-md: 10px;
+	--border-radius-sm: calc(var(--border-radius-md) / 2);
+
+	--transform-scale: scale3d(1.06, 1.06, 1.06);
+
+	--transition-function: cubic-bezier(.645, .045, .355, 1);
+	--transition-duration: 0.35s;
+}
+
+/* #endregion Root */
+
+/*----------------------------------------------
+2. Button
+----------------------------------------------*/
+
+/* #region Button */
+
+.button,
+a.button,
+.added_to_cart,
+button[type="submit"],
+input[type="submit"] {
+	display: inline-flex;
+    vertical-align: middle;
+	justify-content: center;
+    align-items: center;
+	gap: 0.5em;
+	white-space: nowrap;
+	min-height: 3rem;
+	padding: 0 1.25rem;
+	background-color: var(--button-color);
+	background-image: none;
+	border: 2px solid transparent;
+	border-radius: var(--border-radius-md);
+	font-size: 0.95em;
+	font-weight: 600;
+	color: var(--black-color);
+	text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-function) var(--transition-duration);
+}
+
+[data-theme="dark"] .button,
+[data-theme="dark"] a.button,
+[data-theme="dark"] .added_to_cart,
+[data-theme="dark"] button[type="submit"],
+[data-theme="dark"] input[type="submit"] {
+    --button-color: var(--button-color-dark);
+}
+
+.button:hover,
+.button:active,
+.button:focus,
+a.button:hover,
+a.button:active,
+a.button:focus,
+.added_to_cart:hover,
+.added_to_cart:active,
+.added_to_cart:focus,
+button[type="submit"]:hover,
+button[type="submit"]:active,
+button[type="submit"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.button:focus,
+.button:active,
+a.button:focus,
+a.button:active,
+.added_to_cart:focus,
+.added_to_cart:active,
+button[type="submit"]:focus,
+button[type="submit"]:active,
+input[type="submit"]:focus,
+input[type="submit"]:active {
+	box-shadow: 0 0 0 0.3125rem color-mix(in srgb, var(--neutral-color) 15%, transparent);
+}
+
+.button svg,
+a.button svg,
+.added_to_cart svg,
+button[type="submit"] svg,
+input[type="submit"] svg {
+    fill: currentColor;
+}
+
+.button.outlined,
+a.button.outlined,
+.added_to_cart.outlined,
+button[type="submit"].outlined,
+input[type="submit"].outlined {
+    border-color: currentColor;
+}
+
+[data-theme="dark"] .button.outlined,
+[data-theme="dark"] a.button.outlined,
+[data-theme="dark"] .added_to_cart.outlined,
+[data-theme="dark"] button[type="submit"].outlined,
+[data-theme="dark"] input[type="submit"].outlined {
+	border-color: var(--button-color-dark);
+    color: var(--white-color);
+}
+
+.button.outlined,
+.button.text,
+.button.flat,
+a.button.outlined,
+a.button.text,
+a.button.flat,
+.added_to_cart.outlined,
+.added_to_cart.text,
+.added_to_cart.flat,
+button[type="submit"].outlined,
+button[type="submit"].text,
+button[type="submit"].flat,
+input[type="submit"].outlined,
+input[type="submit"].text,
+input[type="submit"].flat {
+    background-color: transparent;
+    color: var(--button-color);
+}
+
+[data-theme="dark"] .button.text,
+[data-theme="dark"] a.button.text,
+[data-theme="dark"] .added_to_cart.text,
+[data-theme="dark"] button[type="submit"].text,
+[data-theme="dark"] input[type="submit"].text {
+    color: var(--white-color);
+}
+
+.button.outlined:hover,
+.button.outlined:active,
+.button.outlined:focus,
+a.button.outlined:hover,
+a.button.outlined:active,
+a.button.outlined:focus,
+.added_to_cart.outlined:hover,
+.added_to_cart.outlined:active,
+.added_to_cart.outlined:focus,
+button[type="submit"].outlined:hover,
+button[type="submit"].outlined:active,
+button[type="submit"].outlined:focus,
+input[type="submit"].outlined:hover,
+input[type="submit"].outlined:active,
+input[type="submit"].outlined:focus {
+    border-color: currentColor;
+}
+
+.button.outlined:hover,
+.button.outlined:active,
+.button.outlined:focus,
+.button.text:hover,
+.button.text:active,
+.button.text:focus,
+.button.flat:hover,
+.button.flat:active,
+.button.flat:focus,
+a.button.outlined:hover,
+a.button.outlined:active,
+a.button.outlined:focus,
+a.button.text:hover,
+a.button.text:active,
+a.button.text:focus,
+a.button.flat:hover,
+a.button.flat:active,
+a.button.flat:focus,
+.added_to_cart.outlined:hover,
+.added_to_cart.outlined:active,
+.added_to_cart.outlined:focus,
+.added_to_cart.text:hover,
+.added_to_cart.text:active,
+.added_to_cart.text:focus,
+.added_to_cart.flat:hover,
+.added_to_cart.flat:active,
+.added_to_cart.flat:focus,
+button[type="submit"].outlined:hover,
+button[type="submit"].outlined:active,
+button[type="submit"].outlined:focus,
+button[type="submit"].text:hover,
+button[type="submit"].text:active,
+button[type="submit"].text:focus,
+button[type="submit"].flat:hover,
+button[type="submit"].flat:active,
+button[type="submit"].flat:focus,
+input[type="submit"].outlined:hover,
+input[type="submit"].outlined:active,
+input[type="submit"].outlined:focus,
+input[type="submit"].text:hover,
+input[type="submit"].text:active,
+input[type="submit"].text:focus,
+input[type="submit"].flat:hover,
+input[type="submit"].flat:active,
+input[type="submit"].flat:focus {
+  color: var(--primary-color);
+}
+
+.button.flat:hover,
+.button.flat:active,
+.button.flat:focus,
+a.button.flat:hover,
+a.button.flat:active,
+a.button.flat:focus,
+.added_to_cart.flat:hover,
+.added_to_cart.flat:active,
+.added_to_cart.flat:focus,
+button[type="submit"].flat:hover,
+button[type="submit"].flat:active,
+button[type="submit"].flat:focus,
+input[type="submit"].flat:hover,
+input[type="submit"].flat:active,
+input[type="submit"].flat:focus {
+  background-color: var(--fill-color);
+}
+
+.button.text,
+a.button.text,
+.added_to_cart.text,
+button[type="submit"].text,
+input[type="submit"].text {
+	padding: 0;
+	min-height: initial;
+	border: 0;
+	border-radius: 5px;
+	box-shadow: 0 0 0 0.5rem transparent;
+	font-size: 1em;
+	transition-delay: 0s !important;
+}
+
+.button.text:hover,
+.button.text:active,
+.button.text:focus,
+a.button.text:hover,
+a.button.text:active,
+a.button.text:focus,
+.added_to_cart.text:hover,
+.added_to_cart.text:active,
+.added_to_cart.text:focus,
+button[type="submit"].text:hover,
+button[type="submit"].text:active,
+button[type="submit"].text:focus,
+input[type="submit"].text:hover,
+input[type="submit"].text:active,
+input[type="submit"].text:focus {
+  background-color: var(--fill-color);
+  box-shadow: 0 0 0 0.6rem var(--fill-color);
+}
+
+.relome-align-left {
+    text-align: left;
+}
+
+.relome-align-right {
+    text-align: right;
+}
+
+.relome-align-center {
+    text-align: center;
+}
+
+.relome-align-justify .button {
+    width: 100%;
+}
+
+.btn-smaller {
+	padding: 12px 18px;
+	font-size: 0.9rem;
+}
+
+.btn:hover .btn-text {
+	-webkit-animation: MoveScaleUpInitial 0.25s forwards, MoveScaleUpEnd 0.25s forwards 0.25s;
+	animation: MoveScaleUpInitial 0.25s forwards, MoveScaleUpEnd 0.25s forwards 0.25s;
+}
+
+/* #endregion Button */
